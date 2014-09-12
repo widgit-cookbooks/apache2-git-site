@@ -10,15 +10,24 @@
         <Directory />
                 Options None
                 AllowOverride None
+<% if node['apache']['version'] == '2.4' %>
+                Require all denied
+<% else %>
                 Order deny,allow
                 Deny from all
+<% end %>
+
         </Directory>
 
         <Directory <%= @documentroot %>>
                 Options <%= @options.join(' ') %>
                 AllowOverride All
+<% if node['apache']['version'] == '2.4' %>
+                Require all granted
+<% else %>
                 Order allow,deny
                 allow from all
+<% end %>
         </Directory>
 
 <% @aliases.each_pair do |apache_alias, directory| %>
