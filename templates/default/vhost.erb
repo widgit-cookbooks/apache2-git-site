@@ -1,0 +1,33 @@
+<VirtualHost *>
+        ServerAdmin <%= @serveradmin %>
+
+        ServerName <%= @servername %>
+<% @server_aliases.each do |server_alias| %>
+        ServerAlias <%= server_alias %>
+<% end %>
+
+        DocumentRoot <%= @documentroot %>
+        <Directory />
+                Options None
+                AllowOverride None
+                Order deny,allow
+                Deny from all
+        </Directory>
+
+        <Directory <%= @documentroot %>>
+                Options <%= @options.join(' ') %>
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+<% @aliases.each_pair do |apache_alias, directory| %>
+        Alias <%= apache_alias %> <%= directory %>
+<% end %>
+
+<% @extra_config.each do |line| %>
+        <%= line %>
+<% end %>
+
+</VirtualHost>
+
