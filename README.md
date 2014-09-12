@@ -34,137 +34,171 @@ Recipes included
 
 <table>
   <tr>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
+   <th>Type</th>
+   <th>Description</th>
+   <th>Default</th>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites-path']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites-path']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Root directory to contain cloned sites</td>
-    <td colspan="3">- *node/var/www</td>
+   <td>String</td>
+   <td>Root directory to contain cloned sites</td>
+   <td colspan="3">
+- *node/var/www*
+   </td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites']*
+   </td>
   </tr>
   <tr>
-    <td>Hash</td>
-    <td>Hash of site definitions</td>
-    <td colspan="3">- *nodeEmpty hash</td>
+   <td>Hash</td>
+   <td>Hash of site definitions</td>
+   <td>Empty hash</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites']{hash_key}*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites']{hash_key}*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Site ID</td>
-    <td>None</td>
+   <td>String</td>
+   <td>Site ID</td>
+   <td>None</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites']{hash_value}*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites']{hash_value}*
+   </td>
   </tr>
   <tr>
-    <td>Hash</td>
-    <td>Hash of site parameters</td>
-    <td>None</td>
+   <td>Hash</td>
+   <td>Hash of site parameters</td>
+   <td>None</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['documentroot']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['documentroot']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Document root relative to the root of the git repostitory</td>
-    <td>htdocs</td>
+   <td>String</td>
+   <td>Document root relative to the root of the git repostitory</td>
+   <td>htdocs</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['repository']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['repository']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>URL for the git repository to be cloned</td>
-    <td>None (required)</td>
+   <td>String</td>
+   <td>URL for the git repository to be cloned</td>
+   <td>None (required)</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['branch']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['branch']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Git branch to be checked out</td>
-    <td>node['environment']</td>
+   <td>String</td>
+   <td>Git branch to be checked out</td>
+   <td>node['environment']</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['site-user']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['site-user']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>User that the checked-out files will be owned by</td>
-    <td>www-#{site-id}</td>
+   <td>String</td>
+   <td>User that the checked-out files will be owned by</td>
+   <td>www-#{site-id}</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['site-group']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['site-group']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Group that the checked-out files will be owned by. Must already exist, and apache user should be a member.</td>
-    <td>node['apache']['group']</td>
+   <td>String</td>
+   <td>Group that the checked-out files will be owned by. Must already exist, and apache user should be a member.</td>
+   <td>node['apache']['group']</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['servername']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['servername']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Vhost server name</td>
-    <td>None (required)</td>
+   <td>String</td>
+   <td>Vhost server name</td>
+   <td>None (required)</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['serveradmin']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['serveradmin']*
+   </td>
   </tr>
   <tr>
-    <td>String</td>
-    <td>Server admin</td>
-    <td>webmaster@#{['apache2-git-site']['sites'][site_id]['servername']}</td>
+   <td>String</td>
+   <td>Server admin</td>
+   <td>webmaster@#{['apache2-git-site']['sites'][site_id]['servername']}</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['serveraliases']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['serveraliases']*
+   </td>
   </tr>
   <tr>
-    <td>String Array</td>
-    <td>Vhost server aliases</td>
-    <td>Empty array</td>
+   <td>String Array</td>
+   <td>Vhost server aliases</td>
+   <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['default-options']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['default-options']*
+   </td>
   </tr>
   <tr>
-    <td>String Array</td>
-    <td>Default apache options for documentroot directory</td>
-    <td>['FollowSymLinks', 'MultiViews', 'ExecCgi']</td>
+   <td>String Array</td>
+   <td>Default apache options for documentroot directory</td>
+   <td>['FollowSymLinks', 'MultiViews', 'ExecCgi']</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['aliases']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['aliases']*
+   </td>
   </tr>
   <tr>
-    <td>Hash Array {"path": "root"}</td>
-    <td>An array of hashes that define aliases, where 'path' is the alias path, and 'root' is the alias root relative to the checkout directory</td>
-    <td>Empty array</td>
+   <td>Hash Array {"path": "root"}</td>
+   <td>An array of hashes that define aliases, where 'path' is the alias path, and 'root' is the alias root relative to the checkout directory</td>
+   <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['extra-config']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['extra-config']*
+   </td>
   </tr>
   <tr>
-    <td>String Array</td>
-    <td>An array of additional configuration lines to be added to the apache virtual host configuration file. For example, adding rewrite rules or specifying a custom log.</td>
-    <td>Empty array</td>
+   <td>String Array</td>
+   <td>An array of additional configuration lines to be added to the apache virtual host configuration file. For example, adding rewrite rules or specifying a custom log.</td>
+   <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['sync-notify-commands']*</td>
+   <td colspan="3">
+- *node['apache2-git-site']['sites'][site_id]['sync-notify-commands']*
+   </td>
   </tr>
   <tr>
-    <td>String Array</td>
-    <td>Specifies a sequence of commands to be executed from inside the git root directory (as the site user) when changes are pulled from the git repository</td>
-    <td>Empty array</td>
+   <td>String Array</td>
+   <td>Specifies a sequence of commands to be executed from inside the git root directory (as the site user) when changes are pulled from the git repository</td>
+   <td>Empty array</td>
   </tr>
 </table>
 
