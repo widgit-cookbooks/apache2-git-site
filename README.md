@@ -40,19 +40,17 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites-path']*
+    <ul><li><strong>node['apache2-git-site']['sites-path']</li></ul></strong>
    </td>
   </tr>
   <tr>
    <td>String</td>
    <td>Root directory to contain cloned sites</td>
-   <td colspan="3">
-- *node/var/www*
-   </td>
+   <td>/var/www</td>
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites']*
+    <ul><li><strong>node['apache2-git-site']['sites']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -62,7 +60,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites']{hash_key}*
+    <ul><li><strong>node['apache2-git-site']['sites']{hash_key}*
    </td>
   </tr>
   <tr>
@@ -72,7 +70,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites']{hash_value}*
+    <ul><li><strong>node['apache2-git-site']['sites']{hash_value}*
    </td>
   </tr>
   <tr>
@@ -82,7 +80,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['documentroot']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['documentroot']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -92,7 +90,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['repository']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['repository']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -102,7 +100,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['branch']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['branch']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -112,7 +110,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['site-user']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['site-user']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -122,7 +120,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['site-group']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['site-group']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -132,7 +130,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['servername']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['servername']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -142,7 +140,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['serveradmin']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['serveradmin']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -152,7 +150,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['serveraliases']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['serveraliases']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -162,7 +160,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['default-options']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['default-options']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -172,7 +170,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['aliases']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['aliases']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -182,7 +180,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['extra-config']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['extra-config']</li></ul></strong>
    </td>
   </tr>
   <tr>
@@ -192,7 +190,7 @@ Recipes included
   </tr>
   <tr>
    <td colspan="3">
-- *node['apache2-git-site']['sites'][site_id]['sync-notify-commands']*
+    <ul><li><strong>node['apache2-git-site']['sites'][site_id]['sync-notify-commands']</li></ul></strong>
    </td>
   </tr>
   <tr>
