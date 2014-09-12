@@ -39,23 +39,23 @@ Recipes included
     <th>Default</th>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites-path']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites-path']*</td>
   </tr>
   <tr>
     <td>String</td>
     <td>Root directory to contain cloned sites</td>
-    <td colspan="3"><tt>node/var/www</tt></td>
+    <td colspan="3">- *node/var/www</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites']*</td>
   </tr>
   <tr>
     <td>Hash</td>
     <td>Hash of site definitions</td>
-    <td colspan="3"><tt>nodeEmpty hash</tt></td>
+    <td colspan="3">- *nodeEmpty hash</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites']{hash_key}</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites']{hash_key}*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -63,7 +63,7 @@ Recipes included
     <td>None</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites']{hash_value}</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites']{hash_value}*</td>
   </tr>
   <tr>
     <td>Hash</td>
@@ -71,7 +71,7 @@ Recipes included
     <td>None</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['documentroot']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['documentroot']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -79,7 +79,7 @@ Recipes included
     <td>htdocs</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['repository']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['repository']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -87,7 +87,7 @@ Recipes included
     <td>None (required)</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['branch']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['branch']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -95,7 +95,7 @@ Recipes included
     <td>node['environment']</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['site-user']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['site-user']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -103,7 +103,7 @@ Recipes included
     <td>www-#{site-id}</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['site-group']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['site-group']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -111,7 +111,7 @@ Recipes included
     <td>node['apache']['group']</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['servername']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['servername']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -119,7 +119,7 @@ Recipes included
     <td>None (required)</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['serveradmin']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['serveradmin']*</td>
   </tr>
   <tr>
     <td>String</td>
@@ -127,7 +127,7 @@ Recipes included
     <td>webmaster@#{['apache2-git-site']['sites'][site_id]['servername']}</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['serveraliases']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['serveraliases']*</td>
   </tr>
   <tr>
     <td>String Array</td>
@@ -135,7 +135,7 @@ Recipes included
     <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['default-options']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['default-options']*</td>
   </tr>
   <tr>
     <td>String Array</td>
@@ -143,7 +143,7 @@ Recipes included
     <td>['FollowSymLinks', 'MultiViews', 'ExecCgi']</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['aliases']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['aliases']*</td>
   </tr>
   <tr>
     <td>Hash Array {"path": "root"}</td>
@@ -151,7 +151,7 @@ Recipes included
     <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['extra-config']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['extra-config']*</td>
   </tr>
   <tr>
     <td>String Array</td>
@@ -159,7 +159,7 @@ Recipes included
     <td>Empty array</td>
   </tr>
   <tr>
-    <td colspan="3"><tt>node['apache2-git-site']['sites'][site_id]['sync-notify-commands']</tt></td>
+    <td colspan="3">- *node['apache2-git-site']['sites'][site_id]['sync-notify-commands']*</td>
   </tr>
   <tr>
     <td>String Array</td>
