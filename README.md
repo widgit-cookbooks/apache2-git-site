@@ -198,6 +198,16 @@ Recipes included
    <td>Specifies a sequence of commands to be executed from inside the git root directory (as the site user) when changes are pulled from the git repository</td>
    <td>Empty array</td>
   </tr>
+  <tr>
+   <td colspan="3">
+    <ul><li><strong>node['apache2-git-site']['common']</li></ul></strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Hash</td>
+   <td>Specifies a set of defaults which are merged with all site configurations. For example, you can add several lines to node['apache2-git-site']['common']['extra-config'] which will be added to all vhosts</td>
+   <td>Empty array</td>
+  </tr>
 </table>
 
 ## Usage

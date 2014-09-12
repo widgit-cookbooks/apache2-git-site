@@ -21,7 +21,20 @@ end
 
 # Create configuration for each site defined in the node attributes
 
-node['apache2-git-site']['sites'].each_pair do |site_id, config|
+node['apache2-git-site']['sites'].each_pair do |site_id, site_config|
+
+  # merge the site config with the common defaults
+
+  common_config = node['apache2-git-site']['common'] || {}
+  config = common_config.merge(site_config) do |key, old, new|
+    if old.is_a?(Array) and new.is_a?(Array)
+      old.concat new
+    else
+      new
+    end
+  end
+
+  # initialise parameters
 
   clone_path = File.join(sites_path, site_id)
   document_root = File.join(clone_path, (config['documentroot'] || 'htdocs'))
